@@ -1,10 +1,10 @@
-- I created this repository to learn **design patterns**.
-- Each pattern is a Naruto reference because I like the anime.
+This repository was created to learn **design patterns**.
 
 ### To-do
 
 - [x] Factory Method
-- [ ] Abstract Factory
+- [x] Abstract Factory
+- [ ] Builder
 
 ### Learning materials
 
