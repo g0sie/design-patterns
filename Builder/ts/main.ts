@@ -1,19 +1,22 @@
 import ToolBuilder from "./ToolBuilder.js";
 import RecipeBuilder from "./RecipeBuilder.js";
+import Director from "./Director.js";
 
 const toolBuilder = new ToolBuilder();
 const recipeBuilder = new RecipeBuilder();
+const director = new Director();
 
-toolBuilder.setName("Wooden Axe");
-toolBuilder.setOre("wood");
-toolBuilder.setType("axe");
+director.makeWoodenAxe(toolBuilder);
 const woodenAxe = toolBuilder.getResult();
 
-recipeBuilder.setName("Wooden Axe");
-recipeBuilder.setOre("wood");
-recipeBuilder.setType("axe");
+director.makeWoodenAxe(recipeBuilder);
 const woodenAxeRecipe = recipeBuilder.getResult();
+
+director.makeDiamondHoe(recipeBuilder);
+const diamondHoeRecipe = recipeBuilder.getResult();
 
 woodenAxe.log();
 console.log("---------------");
 woodenAxeRecipe.print();
+console.log("---------------");
+diamondHoeRecipe.print();
